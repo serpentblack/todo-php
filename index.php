@@ -170,7 +170,7 @@ $tasks = $repo->all();
     </div>
 
     <p class="text-center text-muted mt-4">
-      Hecho con ❤ en PHP 8 + SQLite + Bootstrap • DB: <code><?= htmlspecialchars(App\Database::path()) ?></code>
+      Hecho con ❤ en PHP 8 + SQLite + Bootstrap • por <a href="https://www.linkedin.com/in/crhistian-ovalle/" target="_blank">@desaextremo</a>
     </p>
   </main>
 </body>
