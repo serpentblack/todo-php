@@ -119,13 +119,29 @@ $tasks = $repo->all();
     /* Link */
     a{ color: var(--brand); }
     a:hover{ color:#0E3F35; }
+	/* Tamaño cómodo del logo + respuesta */
+	.brand-logo{
+	  width: 72px;        /* ↑ Ajusta aquí si lo quieres aún más grande (p.ej., 88px o 96px) */
+	  height: 72px;
+	  object-fit: contain;
+	}
+
+	@media (min-width: 992px){
+	  .brand-logo{
+		width: 84px;      /* un poco más grande en pantallas grandes */
+		height: 84px;
+	  }
+	}
+
+	.brand-bar .me-3{ margin-right: 1.25rem !important; } /* antes era 1rem */
+
   </style>
 </head>
 <body>
   <!-- CABECERA CON LOGO -->
   <header class="brand-bar">
     <div class="container py-3 d-flex align-items-center">
-      <img src="assets/logo.png" alt="MyToDo" width="48" height="48" class="me-3" />
+      <img src="assets/logo.png" alt="MyToDo" class="brand-logo me-3" />
       <div>
         <div class="brand-title h3 mb-0">MyToDo</div>
         <small class="text-muted">PHP + SQLite + Bootstrap</small>
