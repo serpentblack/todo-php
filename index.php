@@ -32,7 +32,7 @@ $tasks = $repo->all();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ToDo PHP + SQLite</title>
+  <title>MyToDo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>.done{ text-decoration: line-through; color:#6c757d; }</style>
 </head>
@@ -92,7 +92,7 @@ $tasks = $repo->all();
     </div>
 
     <p class="text-center text-muted mt-4">
-      Hecho con PHP 8 + SQLite + Bootstrap • Base de datos: <code><?= htmlspecialchars(App\Database::path()) ?></code>
+      Desarrolloextremo, Cuando compartes aprendes...
     </p>
   </div>
 </body>
