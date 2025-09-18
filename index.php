@@ -38,7 +38,7 @@ $tasks = $repo->all();
 </head>
 <body class="bg-light">
   <div class="container py-4">
-    <h1 class="mb-4">✅ ToDo (PHP + SQLite)</h1>
+    <h1 class="mb-4">🚀MyTodo</h1>
 
     <div class="card mb-4">
       <div class="card-body">
