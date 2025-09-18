@@ -29,4 +29,18 @@ class TaskRepository {
     $stmt = $this->pdo->prepare('DELETE FROM tasks WHERE id = ?');
     $stmt->execute([$id]);
   }
+
+  /* ====== NUEVO: obtener tarea por id ====== */
+  public function findById(int $id): ?array {
+    $stmt = $this->pdo->prepare('SELECT * FROM tasks WHERE id = ? LIMIT 1');
+    $stmt->execute([$id]);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $row ?: null;
+  }
+
+  /* ====== NUEVO: actualizar título/descripcion ====== */
+  public function update(int $id, string $title, ?string $description = null): void {
+    $stmt = $this->pdo->prepare('UPDATE tasks SET title = ?, description = ? WHERE id = ?');
+    $stmt->execute([$title, $description, $id]);
+  }
 }
