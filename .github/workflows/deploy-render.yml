@@ -1,8 +1,10 @@
-name: Deploy a Render (por rama main)
+name: Deploy a Render (después de CI)
 
 on:
-  push:
-    branches: [ "main" ]
+  workflow_run:
+    workflows: ["CI PHP"]   # ← nombre EXACTO de tu workflow de CI
+    types: [completed]
+    branches: [main]
 
 concurrency:
   group: render-deploy
@@ -10,6 +12,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Disparar Deploy Hook de Render
